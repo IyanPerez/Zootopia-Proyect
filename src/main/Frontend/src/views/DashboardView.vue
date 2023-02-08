@@ -3,6 +3,12 @@ import Graph from "../components/Graph.vue";
 import Sidebar from "../components/Sidebar.vue";
 import TableComponent from "../components/TableComponent.vue";
 import TableDetails from "../components/TableDetails.vue";
+import { useAnimalsStore } from "../stores/animalStore";
+
+const store = useAnimalsStore();
+onBeforeMount(async() => {
+  await store.fetchAnimals();
+});
 </script>
 <template>
   <div class="dashboard-container">
