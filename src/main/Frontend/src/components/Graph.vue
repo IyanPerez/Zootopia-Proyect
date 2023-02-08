@@ -18,13 +18,7 @@ const data = computed(() => ({
   ],
 }));
 
-const options = ref({
-  plugins: {
-    title: {
-      text: "Doughnut",
-    },
-  },
-});
+
 </script>
 <template>
   <DoughnutChart
